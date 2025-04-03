@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vitrine de ONGs</title>
+    <link rel="stylesheet" href="../../navbar/style.css" />
+    <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="../telahome/index.html">
+                <img src="../../assets/logo-navbar.png" alt="Logozinha">
+                </a>
+            </div>
+            <div class="content-nav">
+                <a href="../tela-home/index.html" class="navlinks">Parceiros</a>
+                <a href="../tela-sobrenos/index.html" class="navlinks">Sobre nós</a>
+                <a href="../tela-divulgue/index.html" class="navlinks">Divulgue seu projeto</a>
+            </div>
+        </div>
+    </header>
+
+  <!-- Contêiner do Carrossel e das Caixas -->
+  <div class="carousel-info-container">
+    <!-- Carrossel -->
+    <div class="carousel-container">
+      <div class="carousel-main">
+        <img id="mainImage" src="../../assets/cidadaopromundo/img1.png" alt="Imagem principal do carrossel">
+      </div>
+      <div class="carousel-thumbnails">
+        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+        <div class="thumbnails">
+          <img class="thumbnail" src="../../assets/cidadaopromundo/img2.png" alt="Imagem 1" onclick="selectImage(0)">
+          <img class="thumbnail" src="../../assets/cidadaopromundo/img3.png" alt="Imagem 2" onclick="selectImage(1)">
+          <img class="thumbnail" src="../../assets/cidadaopromundo/img4.png" alt="Imagem 2" onclick="selectImage(2)">
+          <img class="thumbnail" src="../../assets/cidadaopromundo/img1.png" alt="Imagem 2" onclick="selectImage(3)">
+
+        </div>
+        <button class="next" onclick="moveSlide(1)">&#10095;</button>
+      </div>
+    </div>
+
+    <!-- Caixas ao lado do carrossel -->
+    <div class="info-boxes">
+      <div class="info-box">
+        <h3>Horário de Funcionamento</h3>
+        <p>Sab e Dom: 09h - 16h</p>
+      </div>
+      <div class="info-box">
+        <h3>Endereço</h3>
+        <p>Av. Brasil, 1220 - Jardim Guanabara, Campinas - SP, 13073-148</p>
+      </div>
+      <div class="info-box">
+        <h3>Conheça a ONG Cidadão Pró-Mundo</h3>
+        <a href="https://cidadaopromundo.org/" target="_blank" class="button">Acesse o Site oficial</a>
+      </div>
+      <!-- Iframe do Google Maps -->
+  <div class="map-container">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.74960225553!2d-47.07118162384111!3d-22.88570647926996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c8c8abb6e034c5%3A0x4e8c1c6872a841b0!2zQ2lkYWTDo28gUHLDsy1NdW5kbw!5e0!3m2!1spt-BR!2sbr!4v1743689963947!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+    </div>
+  </div>
+
+  <section class="content">
+    <h2>Sobre a Cidadão Pró-Mundo</h2>
+    
+    <p>A <strong>Cidadão Pró-Mundo</strong> é uma ONG que visa transformar a sociedade brasileira por meio da educação em inglês. O principal objetivo da organização é oferecer oportunidades de inclusão e integração social para jovens de escolas públicas, proporcionando o ensino gratuito de inglês, com o apoio de uma rede voluntária de mais de 1.300 pessoas.</p>
+    
+    <p>A missão da Cidadão Pró-Mundo é capacitar os estudantes com habilidades essenciais para sua formação acadêmica e profissional, utilizando materiais didáticos de alta qualidade, fornecidos pela Universidade de Cambridge. A organização segue um modelo de ensino estruturado, que foca no desenvolvimento de todas as habilidades linguísticas, como ouvir, falar, ler e escrever, com a intenção de dar aos alunos confiança para navegar em um mundo mais globalizado.</p>
+    
+    <h2>Nosso Impacto</h2>
+    <ul>
+      <li><strong>10 unidades de ensino</strong> em todo o Brasil</li>
+      <li><strong>Mais de 2.300 alunos</strong> impactados anualmente</li>
+      <li><strong>Treinamento especializado</strong> para nossos voluntários</li>
+      <li><strong>Cursos gratuitos</strong> que desenvolvem habilidades pessoais e profissionais</li>
+    </ul>
+    
+    <p>Com mais de 25 anos de atuação, a Cidadão Pró-Mundo já formou mais de 700 alunos, conquistando reconhecimento como uma das <strong>100 melhores ONGs do Brasil</strong> e recebendo prêmios de transparência e gestão. Seu impacto é notável, e ela continua a expandir suas atividades, formando cidadãos mais preparados para o mercado de trabalho e para atuar em um cenário global.</p>
+    
+    <p><strong>Faça parte dessa história.</strong> Você pode contribuir de diversas maneiras, seja como voluntário, seja como aluno. Na Cidadão Pró-Mundo, todos têm a chance de aprender, ensinar e, assim, transformar o futuro de muitas pessoas.</p>
+    
+    <p><em>Transforme a sociedade através do ensino de inglês!</em></p>
+  </section>
+
+  <style>
+    ul {
+      margin-left: 1.5rem;
+    }
+    .content {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      padding: 20px;
+    }
+  
+    h2, h3 {
+      color: #2a3b5c;
+      margin-bottom: 15px;
+    }
+  
+    h4 {
+      color: #2a3b5c;
+    }
+  
+    p {
+      margin-bottom: 15px;
+    }
+  
+    .steps {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .step {
+      margin-bottom: 20px;
+    }
+  
+    .cta-button {
+      display: inline-block;
+      background-color: #4CAF50;
+      color: white;
+      padding: 12px 20px;
+      margin-top: 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+  
+    .cta-button:hover {
+      background-color: #45a049;
+    }
+  </style>
+  
+
+  <script src="../script.js"></script>
+</body>
+</html>

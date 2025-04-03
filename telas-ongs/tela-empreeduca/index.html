@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vitrine de ONGs</title>
+    <link rel="stylesheet" href="../../navbar/style.css" />
+    <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="../telahome/index.html">
+                <img src="../../assets/logo-navbar.png" alt="Logozinha">
+                </a>
+            </div>
+            <div class="content-nav">
+                <a href="../tela-home/index.html" class="navlinks">Parceiros</a>
+                <a href="../tela-sobrenos/index.html" class="navlinks">Sobre nós</a>
+                <a href="../tela-divulgue/index.html" class="navlinks">Divulgue seu projeto</a>
+            </div>
+        </div>
+    </header>
+
+  <!-- Contêiner do Carrossel e das Caixas -->
+  <div class="carousel-info-container">
+    <!-- Carrossel -->
+    <div class="carousel-container">
+      <div class="carousel-main">
+        <img id="mainImage" src="../../assets/empreeduca/foto1.jpg" alt="Imagem principal do carrossel">
+      </div>
+      <div class="carousel-thumbnails">
+        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+        <div class="thumbnails">
+          <img class="thumbnail" src="../../assets/empreeduca/foto2.jpg" alt="Imagem 1" onclick="selectImage(0)">
+          <img class="thumbnail" src="../../assets/empreeduca/foto3.jpg" alt="Imagem 2" onclick="selectImage(1)">
+          <img class="thumbnail" src="../../assets/empreeduca/foto1.jpg" alt="Imagem 2" onclick="selectImage(2)">
+
+        </div>
+        <button class="next" onclick="moveSlide(1)">&#10095;</button>
+      </div>
+    </div>
+
+    <!-- Caixas ao lado do carrossel -->
+    <div class="info-boxes">
+      <div class="info-box">
+        <h3>Horário de Funcionamento</h3>
+        <p>?</p>
+      </div>
+      <div class="info-box">
+        <h3>Endereço</h3>
+        <p>?</p>
+      </div>
+      <div class="info-box">
+        <h3>Conheça o Instituto Empreeduca</h3>
+        <a href="https://empreeduca.org.br/" target="_blank" class="button">Acesse o Site oficial</a>
+      </div>
+      <!-- Iframe do Google Maps -->
+    </div>
+  </div>
+
+  <section class="content">
+    <h2>Instituto Empreeduca</h2>
+  
+    <p><strong>O Instituto Empreeduca</strong> é uma ONG dedicada a transformar a realidade de jovens da periferia, ajudando-os a romper o ciclo da pobreza por meio da inserção no mercado de trabalho. Sua missão é identificar, desenvolver e conectar esses jovens com oportunidades exclusivas de emprego, oferecendo acesso a oportunidades que muitos nunca imaginariam alcançar.</p>
+  
+    <h2>Como Funciona:</h2>
+  
+    <div class="steps">
+      <div class="step">
+        <h3>1. Identificação</h3>
+        <p>Ao longo do processo, o Instituto Empreeduca <strong>identifica jovens engajados</strong> e acompanha de perto seus objetivos de vida e habilidades, entendendo suas reais necessidades e potenciais.</p>
+      </div>
+      <div class="step">
+        <h3>2. Conexão com o Mercado de Trabalho</h3>
+        <p>Com base no perfil de cada jovem, o Instituto Empreeduca faz a <strong>conexão com vagas exclusivas</strong> oferecidas por empresas parceiras, permitindo que esses jovens tenham uma chance real de conseguir um emprego digno.</p>
+      </div>
+      <div class="step">
+        <h3>3. Desenvolvimento Contínuo</h3>
+        <p>Após a contratação, o Empreeduca continua a <strong>desenvolver esses jovens</strong>, oferecendo treinamentos contínuos nas habilidades mais importantes para suas funções, garantindo não só a sua empregabilidade, mas também o seu crescimento profissional.</p>
+      </div>
+    </div>
+  
+    <h2>O Impacto</h2>
+    <p>Além de mudar a vida de cada jovem, o impacto social gerado pelo trabalho do Instituto Empreeduca é enorme. Cada R$ 1 investido no programa retorna R$ 2,76 para a sociedade, gerando transformação de vida e rompendo ciclos de desigualdade.</p>
+    
+    <p>O Instituto Empreeduca acredita que um <strong>emprego digno</strong> é a chave para romper com o ciclo da pobreza, e sua abordagem tem mostrado resultados comprovados, com jovens que, ao serem contratados, se tornam os principais provedores de suas famílias e iniciam trajetórias de desenvolvimento pessoal e profissional.</p>
+  
+    <h2>Por Que os Jovens?</h2>
+    <p>Historicamente, muitos jovens da periferia não têm acesso a educação de qualidade e, por isso, enfrentam grandes dificuldades para conseguir um trabalho decente. Com 31% das pessoas entre 18 e 25 anos fora do mercado de trabalho formal, o Instituto Empreeduca busca mudar essa realidade e oferecer oportunidades de transformação social.</p>
+  
+    <p><strong>Ao investir em jovens da periferia</strong>, o Instituto Empreeduca está não apenas oferecendo empregos, mas criando um futuro mais próspero para todos. Se você deseja fazer a diferença e contribuir para um futuro melhor, seja um parceiro ou investidor social do Instituto Empreeduca!</p>
+  
+    <p><strong>Juntos, podemos mudar vidas e ajudar a construir um futuro mais igualitário e justo.</strong></p>
+  </section>
+  
+  <style>
+    .content {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      padding: 20px;
+    }
+  
+    h2, h3 {
+      color: #2a3b5c;
+      margin-bottom: 15px;
+    }
+  
+    h4 {
+      color: #2a3b5c;
+    }
+  
+    p {
+      margin-bottom: 15px;
+    }
+  
+    .steps {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .step {
+      margin-bottom: 20px;
+    }
+  
+    .cta-button {
+      display: inline-block;
+      background-color: #4CAF50;
+      color: white;
+      padding: 12px 20px;
+      margin-top: 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+  
+    .cta-button:hover {
+      background-color: #45a049;
+    }
+  </style>
+
+  <script src="../script.js"></script>
+</body>
+</html>

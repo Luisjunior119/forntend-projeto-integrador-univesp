@@ -1,0 +1,218 @@
+/* Reset de margens e padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  /* Container da Navbar */
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #fff;
+    height: 115px;
+  }
+  
+  /* Logo */
+  .logo {
+    width: 204px;
+    height: 86px;
+    cursor: pointer;
+  }
+  
+  /* Links de Navegação */
+  .content-nav {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    font-weight: 600;
+  }
+  
+  .navlinks {
+    font-size: 1.5rem;
+    font-style: inter;
+    cursor: pointer;
+    position: relative;
+    color: #000;
+    text-decoration: none;
+    transition: all 0.55s ease;
+  }
+  
+  .navlinks:hover::before,
+  .navlinks:hover::after {
+    width: 50%;
+  }
+  
+  .navlinks::before,
+  .navlinks::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    height: 2px;
+    background-color: #000;
+    transition: all 0.55s ease;
+    width: 0;
+  }
+  
+  .navlinks::before {
+    left: 0;
+  }
+  
+  .navlinks::after {
+    right: 0;
+  }
+  
+  /* Carrossel e Caixas */
+  .carousel-info-container {
+    display: flex;
+    justify-content: center; /* Centraliza o conteúdo */
+    align-items: flex-start;
+    margin-top: 40px;
+  }
+  
+  .carousel-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 30px; /* Espaço entre o carrossel e as caixas */
+  }
+  
+  .carousel-main {
+    width: 620px;
+    margin-bottom: 20px;
+  }
+  
+  .carousel-main img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .carousel-thumbnails {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+  }
+  
+  .thumbnails {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .thumbnail {
+    width: 100px;
+    height: auto;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  
+  /* Opacidade das miniaturas */
+  .thumbnail:not(.active) {
+    opacity: 0.5;
+  }
+  
+  .thumbnail:hover {
+    transform: scale(1.1);
+  }
+  
+  button {
+    position: absolute;
+    top: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+  }
+  
+  button.prev {
+    left: 10px;
+    transform: translateY(-50%);
+  }
+  
+  button.next {
+    right: 10px;
+    transform: translateY(-50%);
+  }
+  
+  /* Caixas ao lado do carrossel */
+  .info-boxes {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 300px;
+  }
+  
+  .info-box {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .info-box h3 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+  }
+  
+  .info-box p {
+    font-size: 1.2rem;
+    color: #555;
+  }
+  
+  .button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  .button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Estilo do iframe */
+  .map-container {
+    width: 100%;
+    margin-top: 30px;
+    text-align: center;
+  }
+  
+  .map-container iframe {
+    border: 0;
+    border-radius: 10px;
+    max-width: 100%;
+    width: 100%;
+    height: 250px;
+  }
+  
+  /* Conteúdo principal (Sobre o Instituto Ser+) */
+  .content {
+    width: 950px; /* Limita a largura da seção */
+    max-width: 1200px; /* Largura máxima */
+    margin: 0 auto; /* Centraliza horizontalmente */
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    text-align: left; /* Alinha o texto à esquerda */
+  }
+  
+  .content h2 {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  
+  .content p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  

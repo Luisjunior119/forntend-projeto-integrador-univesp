@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vitrine de ONGs</title>
+    <link rel="stylesheet" href="../../navbar/style.css" />
+    <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="../telahome/index.html">
+                <img src="../../assets/logo-navbar.png" alt="Logozinha">
+                </a>
+            </div>
+            <div class="content-nav">
+                <a href="../tela-home/index.html" class="navlinks">Parceiros</a>
+                <a href="../tela-sobrenos/index.html" class="navlinks">Sobre nós</a>
+                <a href="../tela-divulgue/index.html" class="navlinks">Divulgue seu projeto</a>
+            </div>
+        </div>
+    </header>
+
+  <!-- Contêiner do Carrossel e das Caixas -->
+  <div class="carousel-info-container">
+    <!-- Carrossel -->
+    <div class="carousel-container">
+      <div class="carousel-main">
+        <img id="mainImage" src="../../assets/hamburgada do bem/img1.jpg" alt="Imagem principal do carrossel">
+      </div>
+      <div class="carousel-thumbnails">
+        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+        <div class="thumbnails">
+          <img class="thumbnail" src="../../assets/hamburgada do bem/img2.jpg" alt="Imagem 1" onclick="selectImage(0)">
+          <img class="thumbnail" src="../../assets/hamburgada do bem/img3.jpg" alt="Imagem 2" onclick="selectImage(1)">
+          <img class="thumbnail" src="../../assets/hamburgada do bem/img4.jpg" alt="Imagem 3" onclick="selectImage(2)">
+          <img class="thumbnail" src="../../assets/hamburgada do bem/img5.jpg" alt="Imagem 4" onclick="selectImage(3)">
+          <img class="thumbnail" src="../../assets/hamburgada do bem/img6.jpg" alt="Imagem 5" onclick="selectImage(4)">
+          <img class="thumbnail" src="../../assets/hamburgada do bem/img1.jpg" alt="Imagem 5" onclick="selectImage(5)">
+        </div>
+        <button class="next" onclick="moveSlide(1)">&#10095;</button>
+      </div>
+    </div>
+
+    <!-- Caixas ao lado do carrossel -->
+    <div class="info-boxes">
+      <div class="info-box">
+        <h3>Horário de Funcionamento</h3>
+        <p>Seg a Sex: 11h - 20h</p>
+      </div>
+      <div class="info-box">
+        <h3>Endereço</h3>
+        <p>R. Claudino Barbosa, nº248 - Macedo, Guarulhos - SP, 07113-040</p>
+      </div>
+      <div class="info-box">
+        <h3>Conheça sobre a Hamburgada do Bem</h3>
+        <a href="https://www.hamburgadadobem.com.br/" target="_blank" class="button">Acesse o Site oficial</a>
+      </div>
+      <!-- Iframe do Google Maps -->
+  <div class="map-container">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3659.8487020878474!2d-46.51900092382744!3d-23.465921378865453!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cef5bb57c4d701%3A0x6be6edb338ad061a!2sHamburgada%20do%20Bem!5e0!3m2!1spt-BR!2sbr!4v1743685572217!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+    </div>
+  </div>
+
+  <section class="content">
+    <h2>Hamburgada do Bem</h2>
+  
+    <p>A <strong>Hamburgada do Bem</strong> é uma ONG que nasceu com a missão de levar <strong>amor, diversão e informação</strong> para crianças em comunidades carentes, utilizando o simples ato de distribuir hambúrgueres como forma de criar momentos de alegria e integração social. Fundada em 2015, a organização tem como objetivo promover a inclusão social e transformar a vida de crianças e jovens, criando experiências inesquecíveis.</p>
+  
+    <h2>Impacto e Alcance</h2>
+    <p>Até o momento, a Hamburgada do Bem já atendeu quase <strong>200 mil crianças</strong> em <strong>6 países</strong> diferentes, com a participação de mais de <strong>80 mil voluntários</strong>. A ONG realiza eventos mensais com a colaboração de pessoas que se dedicam a fazer a diferença e proporcionar alegria às comunidades que mais necessitam.</p>
+  
+    <h2>Missão</h2>
+    <p><strong>Promover a integração social</strong> entre voluntários e crianças através de uma experiência inédita, visando tornar as pessoas melhores e fortalecer os laços comunitários.</p>
+  
+    <h2>Visão</h2>
+    <p><strong>Ser uma inspiração</strong> para pessoas ao redor do mundo, gerando nelas uma inquietude positiva para transformar o mundo ao seu redor.</p>
+  
+    <h2>Valores</h2>
+    <ul>
+      <li><strong>Excelência</strong></li>
+      <li><strong>Amor</strong></li>
+      <li><strong>Empatia</strong></li>
+      <li><strong>Ética</strong></li>
+      <li><strong>Respeito</strong></li>
+      <li><strong>Equipe</strong></li>
+    </ul>
+  
+    <h2>Nosso Lema</h2>
+    <p><em>"O hambúrguer é a desculpa que usamos para levar amor, cuidados e informação para crianças de comunidades carentes de todo o mundo."</em></p>
+  
+    <p><strong>Junte-se à Hamburgada do Bem e ajude a transformar o mundo, um hambúrguer de cada vez.</strong></p>
+  </section>
+  
+  <style>
+    .content {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      padding: 20px;
+      color: #333;
+    }
+  
+    h2, h3 {
+      color: #2a3b5c;
+      margin-bottom: 5px;
+    }
+  
+    p {
+      margin-bottom: 20px;
+    }
+  
+    ul {
+      
+      padding-left: 1.5rem;
+    }
+  
+  
+    ul li a {
+      text-decoration: none;
+      color: #fff;
+      background-color: #4CAF50;
+      padding: 10px 20px;
+      border-radius: 5px;
+    }
+  
+    ul li a:hover {
+      background-color: #45a049;
+    }
+  
+    em {
+      font-style: italic;
+      color: #e67e22;
+    }
+  
+    .cta-button {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 12px 20px;
+      background-color: #4CAF50;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+  
+    .cta-button:hover {
+      background-color: #45a049;
+    }
+  </style>
+
+  <script src="../script.js"></script>
+</body>
+</html>
