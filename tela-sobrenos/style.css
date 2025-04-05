@@ -1,0 +1,38 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.about-section {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.about-section h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.about-section p {
+    font-size: 1.5em;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.logos {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.logos img {
+    width: 300px;
+    height: auto;
+}
