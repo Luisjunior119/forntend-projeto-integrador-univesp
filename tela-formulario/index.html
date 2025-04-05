@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vitrine de ONGs</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../navbar/style.css" />
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="../telahome/index.html">
+                <img src="../../assets/logo-navbar.png" alt="Logozinha">
+                </a>
+            </div>
+            <div class="content-nav">
+                <a href="../tela-home/index.html" class="navlinks">Parceiros</a>
+                <a href="../tela-sobrenos/index.html" class="navlinks">Sobre nós</a>
+                <a href="../tela-divulgue/index.html" class="navlinks">Divulgue seu projeto</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Seção Formulário -->
+    <section class="form-section">
+        <div class="form-left">
+            <h1>Traga sua ONG para a vitrine!</h1>
+            <p>Preencha as informações abaixo para realizar sua inscrição na nossa vitrine de ONGs e ampliar sua visibilidade.</p>
+            <img src="../assets/logo-navbar.png" alt="Logo Vitrine de ONGs" class="logo-image">
+        </div>
+        
+        <div class="form-right">
+            <form id="form" class="form-container">
+                <div class="form-group">
+                    <label for="nome">Nome da Instituição</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="cnpj">CNPJ</label>
+                    <input type="text" id="cnpj" name="cnpj" required>
+                </div>
+                <div class="form-group">
+                    <label for="contato">Número para contato</label>
+                    <input type="tel" id="contato" name="contato" required>
+                </div>
+                <div class="form-group">
+                    <label for="setor">Setor de atuação</label>
+                    <input type="text" id="setor" name="setor" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Qual o e-mail da organização?</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="cep">CEP</label>
+                    <input type="text" id="cep" name="cep" required>
+                </div>
+                <div class="form-group">
+                    <label for="endereco">Endereço</label>
+                    <input type="text" id="endereco" name="endereco" required>
+                </div>
+                <div class="form-group">
+                    <label for="redes">Redes sociais</label>
+                    <input type="text" id="redes" name="redes">
+                </div>
+                <div class="form-group">
+                    <label for="descricao">Descreva a sua ONG</label>
+                    <textarea id="descricao" name="descricao" required></textarea>
+                </div>
+                <button type="submit" id="submitBtn">Inscreva sua ONG na vitrine!</button>
+            </form>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
