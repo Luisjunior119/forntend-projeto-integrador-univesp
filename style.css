@@ -30,7 +30,7 @@ header p {
 .navbar {
   display: flex;
   flex-direction: row;
-  background: rgb(73 0 255 / 68%);
+  background: #4900ffad;
   backdrop-filter: blur(7px);
   height: 80px;
   box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.214);
@@ -65,4 +65,49 @@ header p {
 .container li:hover {
   border-bottom: 6px solid #f0d44b;
   transition: 400ms;
+}
+.container-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  background-color: #f5f2f0;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+
+.info {
+  min-height: 350px;
+  background-color: #4900ffad;
+}
+
+.tarja-roxa {
+  background-color: #51308a;
+  height: 50px;
+  width: 100vw;
+  /*margin-top: 150px;*/
+}
+
+.fonte-fina {
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  font-size: 30px;
+  padding: 55px;
+  color: #fcfcfc;
+  margin-bottom: -20px;
+}
+
+.button {
+  color: azure;
+  background-color: #3cb5f6;
+  border: 1px solid #c7adf4;
+  font-size: 26px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  padding: 15px;
+  margin: 30px;
+  border-radius: 20px;
+}
+
+.button:hover {
+  background-color: #108fe4;
 }
