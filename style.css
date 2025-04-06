@@ -125,10 +125,12 @@ header p {
 }
 
 .carrossel .carrossel__item {
-
   width: 33%;
   margin: 15px;
   background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .carrossel .carrossel__item>h3 {
@@ -145,8 +147,17 @@ header p {
   padding: 15px;
 }
 
-.carrossel .carrossel__item>figure>img {
+.carrossel .carrossel__item > figure {
   width: 100%;
+  height: 200px;
+  overflow: hidden;
+  margin: 0;
+}
+.carrossel .carrossel__item > figure > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 .destaque>figure>img {
   width: 50%;
