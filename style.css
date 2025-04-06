@@ -40,6 +40,11 @@ header p {
   padding: 0 10px;
 }
 
+.navbar img {
+  width: 100px;
+  height: auto;
+}
+
 .container {
   display: flex;
   list-style: none;
