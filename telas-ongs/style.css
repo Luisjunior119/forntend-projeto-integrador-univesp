@@ -11,7 +11,7 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    background-color: #fff;
+    background-color: #0000;
     height: 115px;
   }
   
@@ -51,7 +51,7 @@
     position: absolute;
     bottom: -2px;
     height: 2px;
-    background-color: #000;
+    background-color: #0000;
     transition: all 0.55s ease;
     width: 0;
   }

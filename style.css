@@ -64,8 +64,8 @@ header p {
   justify-content: center;
   height: 100%;
   text-decoration: none;
-  color: rgb(254, 254, 253);
-  font-size: 18px;
+
+  font-size: 1.5rem;
 }
 
 .container li:hover {
