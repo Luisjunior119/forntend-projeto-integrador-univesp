@@ -1,143 +1,74 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@600&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lexend&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Gabarito&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
     <link rel="stylesheet" href="/navbar/style.css" />
-    <link
-      rel="shortcut icon"
-      href="assets/home/logo-navbar.ico"
-      type="image/x-icon"
-    />
-    <title>Vitrine de Ongs - PI</title>
-  </head>
-  <body>
+    <link rel="stylesheet" href="/style2.css" />
+</head>
+<body>
     <header>
-      <div class="container">
-          <div class="logo">
-              <a href="../../index.html">
-              <img src="../../assets/logo-navbar.png" alt="Logozinha">
-              </a>
+        <div class="container">
+            <div class="logo">
+                <a href="../../index.html">
+                <img src="../../assets/logo-navbar.png" alt="Logozinha">
+                </a>
+            </div>
+            <div class="content-nav">
+                <a href="../../index.html" class="navlinks">Parceiros</a>
+                <a href="../../tela-sobrenos/index.html" class="navlinks">Sobre nós</a>
+                <a href="../../tela-formulario/index.html" class="navlinks">Divulgue seu projeto</a>
+            </div>
+        </div>
+    </header>
+    <div class="main-container">
+        <h2 class="titulo">E aí, para onde você quer doar?</h2>
+      
+        <div class="search-bar">
+          <input type="text" placeholder="Digite o nome da ONG ou cidade..." />
+          <button class="search-button">
+            <img src="/assets/search-interface-symbol.png" alt="pesquisar" class="search-icon"
+          </button>
+        </div>
+      
+        <div class="cards-container">
+          <div class="card">
+            <img src="/assets/institutosermais/main.jpg" alt="ONG 1" class="card-img" />
+            <div class="card-content">
+              <h3>Instituto Ser+<br><span>Mooca</span></h3>
+              <p>Rua Taquari, 546 - 1º Andar, Bloco C - Mooca, São Paulo - SP, 03166-000</p>
+              <a href="/telas-ongs/tela-instituto-ser-mais/index.html" class="card-button">Conheça mais sobre a ONG</a>
+            </div>
           </div>
-          <div class="content-nav">
-              <a href="../../index.html" class="navlinks">Parceiros</a>
-              <a href="../../tela-sobrenos/index.html" class="navlinks">Sobre nós</a>
-              <a href="../../tela-formulario/index.html" class="navlinks">Divulgue seu projeto</a>
+      
+          <div class="card">
+            <img src="/assets/hamburgada do bem/main.jpg" alt="ONG 2" class="card-img" />
+            <div class="card-content">
+              <h3>Hamburgada do bem<br><span>Guarulhos</span></h3>
+              <p>R. Cláudio Barbosa, nº248 - Macedo, Guarulhos - SP, 07113-040</p>
+              <a href="/telas-ongs/tela-hambugada/index.html" class="card-button">Conheça mais sobre a ONG</a>
+            </div>
           </div>
-      </div>
-  </header>
-    <!-- <header>
-      <nav class="navbar">
-        <a href="index.html">
-          <img src="assets/logo-navbar.png" alt="logo do site" />
-        </a>
-        <ul class="container">
-          <li><a href="./index.html">home</a></li>
-          <li><a href="./index.html">Parceiros</a></li>
-          <li><a href="./tela-sobrenos/index.html">Sobre Nós</a></li>
-          <li><a href="./tela-formulario/index.html">Divulgue Seu Projeto</a></li>
-        </ul>
-      </nav> -->
-      <!-- <div class="caixa">
-        <h2>Vitrine de Ongs</h2>
-        <p>Encontre ONGs confiáveis e doe com segurança</p>
-        <p>
-          🎖️ ONGs verificadas <br /><br />
-          🎯 apoie causas reais
-        </p>
-      </div>
-    </header> -->
-    <main class="container-main">
-      <div class="info">
-        <h2 class="fonte-fina">Traga sua ONG para a vitrine também!</h2>
-        <button type="button" class="button">Inscrever minha ONG</button>
-      </div>
+          <div class="card">
+            <img src="/assets/empreeduca/main.png" alt="ONG 2" class="card-img" />
+            <div class="card-content">
+              <h3>Instituto Empreeduca<br><span>Indianópolis</span></h3>
+              <p>Av dos Carinás, 170 Indianópolis- São Paulo</p>
+              <a href="/telas-ongs/tela-empreeduca/index.html" class="card-button">Conheça mais sobre a ONG</a>
+            </div>
+          </div>
+          <div class="card">
+            <img src="/assets/cidadaopromundo/main.png" alt="ONG 2" class="card-img" />
+            <div class="card-content">
+              <h3>Cidadão Pró-Mundo<br><span>Campinas</span></h3>
+              <p>Av. Brasil, 1220 - Jardim Guanabara, Campinas - SP, 13073-148</p>
+              <a href="/telas-ongs/tela-cidadao-pro-mundo/index.html" class="card-button">Conheça mais sobre a ONG</a>
+            </div>
+          </div>
 
-      <div class="tarja-roxa"></div>
-
-      <div class="carrossel">
-        <div class="carrossel__item">
-          <h3>Hamburgada do Bem</h3>
-          <figure>
-            <img src="assets/hamburgada do bem/main.jpg" alt="" />
-          </figure>
-          <p>R. Claudino Barbosa, nº248 - Macedo, Guarulhos - SP, 07113-040</p>
-          <a href="/telas-ongs/tela-hambugada/index.html" target="_blank">
-          <button type="button" class="button">Conheça mais sobre a ONG</button>
-        </a>
+          
         </div>
-
-        <div class="carrossel__item">
-          <h3>Instituto Ser +</h3>
-          <figure>
-            <img src="assets/institutosermais/main.jpg" alt="" />
-          </figure>
-          <p>
-            Rua Taquari, 546 - 1º Andar, Bloco C - Mooca, São Paulo - SP,
-            03166-000
-          </p>
-          <a href="/telas-ongs/tela-instituto-ser-mais/index.html" target="_blank">
-          <button type="button" class="button">Conheça mais sobre a ONG</button>
-        </a>
-        </div>
-
-        <div class="carrossel__item">
-          <h3>Instituto Ser + Mooca</h3>
-          <figure>
-            <img src="assets/institutosermais/img1.jpg" alt="" />
-          </figure>
-          <p>
-            Rua Taquari, 546 - 1º Andar, Bloco C - Mooca, São Paulo - SP,
-            03166-000
-          </p>
-          <button type="button" class="button">Conheça mais sobre a ONG</button>
-        </div>
-      </div>
-      <div class="tarja-roxa"></div>
-
-      <div class="destaque">
-        <h2 class="fonte-fina">
-          LOCAL RESERVADO
-          <span class="mark"> PARA POSSIVEL AREA DE ANUNCIOS</span>CASO SEJA
-          NECESSÁRIO
-        </h2>
-        <figure>
-          <img
-            src="assets/hamburgada do bem/img1.jpg"
-            alt="TEXTO ALTERNATIVO COM DESCRIÇÃO DA IMG"
-            title="O QUE ESTIVER AQUI, APARECERÁ COMO UMA LEGEGNDA  ENQUANTO O MOUSE ESTIVER HOVER"
-          />
-          <figcaption>LEGENDA FIXA DA IMAGEM ACIMA</figcaption>
-        </figure>
-      </div>
-    </main>
-    <footer>
-      <p>Feito com ❤️ pelo grupo de PI da UNIVESP</p>
-    </footer>
-  </body>
+      </div>      
+</body>
 </html>
