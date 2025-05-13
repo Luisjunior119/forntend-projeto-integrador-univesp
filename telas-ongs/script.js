@@ -1,29 +1,45 @@
-let currentIndex = 0; // O índice inicial da imagem
-const images = document.querySelectorAll('.thumbnail'); // Seleciona as miniaturas
-const mainImage = document.getElementById('mainImage'); // Seleciona a imagem principal
+// Declare variables in global scope
+window.currentIndex = 0;
+window.images = [];
+window.mainImage = null;
 
-// Função para alterar a imagem principal ao clicar em uma miniatura
-function selectImage(index) {
-  currentIndex = index; // Atualiza o índice da imagem
-  updateMainImage(); // Atualiza a imagem principal
-}
+// Initialize carousel after dynamic content is loaded
+window.initializeCarousel = function () {
+  // Reset carousel variables
+  window.currentIndex = 0;
+  window.images = document.querySelectorAll(".thumbnail");
+  window.mainImage = document.getElementById("mainImage");
 
-// Função para mover a imagem com as setas
-function moveSlide(step) {
-  const totalImages = images.length;
-  currentIndex += step; // Atualiza o índice com base na direção (1 para direita, -1 para esquerda)
+  // Update main image if elements exist
+  if (window.images.length > 0 && window.mainImage) {
+    updateMainImage();
+  }
+};
 
-  if (currentIndex < 0) {
-    currentIndex = totalImages - 1; // Vai para a última imagem se estiver antes da primeira
-  } else if (currentIndex >= totalImages) {
-    currentIndex = 0; // Vai para a primeira imagem se ultrapassar o total
+// Function to change main image when clicking thumbnail
+window.selectImage = function (index) {
+  window.currentIndex = index;
+  updateMainImage();
+};
+
+// Function to move slides with arrows
+window.moveSlide = function (step) {
+  const totalImages = window.images.length;
+  window.currentIndex += step;
+
+  if (window.currentIndex < 0) {
+    window.currentIndex = totalImages - 1;
+  } else if (window.currentIndex >= totalImages) {
+    window.currentIndex = 0;
   }
 
-  updateMainImage(); // Atualiza a imagem principal
-}
+  updateMainImage();
+};
 
-// Função para atualizar a imagem principal com base no índice
+// Function to update main image based on current index
 function updateMainImage() {
-  const selectedImage = images[currentIndex]; // Seleciona a miniatura com base no índice
-  mainImage.src = selectedImage.src; // Atualiza a fonte da imagem principal
+  const selectedImage = window.images[window.currentIndex];
+  if (selectedImage && window.mainImage) {
+    window.mainImage.src = selectedImage.src;
+  }
 }

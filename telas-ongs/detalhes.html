@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detalhes da ONG</title>
+    <link rel="stylesheet" href="../navbar/style.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="logo">
+          <a href="../index.html">
+            <img src="../assets/logo-navbar.png" alt="Logozinha" />
+          </a>
+        </div>
+        <div class="content-nav">
+          <a href="../index.html" class="navlinks">Parceiros</a>
+          <a href="../tela-sobrenos/index.html" class="navlinks">Sobre nós</a>
+          <a href="../tela-formulario/index.html" class="navlinks"
+            >Divulgue seu projeto</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <div id="ong-content">
+      <!-- Content will be loaded dynamically -->
+      <div class="loading">Carregando...</div>
+    </div>
+
+    <style>
+      .content {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        padding: 20px;
+        color: #333;
+      }
+
+      h2,
+      h3 {
+        color: #2a3b5c;
+        margin-bottom: 5px;
+      }
+
+      ul {
+        padding-left: 1.5rem;
+      }
+
+      ul li a {
+        text-decoration: none;
+        color: #fff;
+        background-color: #4caf50;
+        padding: 10px 20px;
+        border-radius: 5px;
+      }
+
+      ul li a:hover {
+        background-color: #45a049;
+      }
+
+      em {
+        font-style: italic;
+        color: #e67e22;
+      }
+
+      .cta-button {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 12px 20px;
+        background-color: #4caf50;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+      }
+
+      .cta-button:hover {
+        background-color: #45a049;
+      }
+    </style>
+
+    <script src="../api.js"></script>
+    <script src="script.js"></script>
+    <script src="detalhes.js"></script>
+  </body>
+</html>
