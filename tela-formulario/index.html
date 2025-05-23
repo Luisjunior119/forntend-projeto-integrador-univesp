@@ -1,80 +1,214 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vitrine de ONGs</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="../../navbar/style.css" />
-</head>
-<body>
+    <style>
+      .notification {
+        display: none;
+        position: fixed;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #4caf50;
+        color: white;
+        padding: 16px;
+        border-radius: 4px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+        animation: fadeIn 0.5s ease-in-out;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translate(-50%, -20px);
+        }
+        to {
+          opacity: 1;
+          transform: translate(-50%, 0);
+        }
+      }
+
+      .image-urls {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .image-url-input {
+        display: flex;
+        gap: 10px;
+      }
+
+      #addImageBtn {
+        margin-top: 10px;
+        padding: 5px 10px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      #addImageBtn:hover {
+        background-color: #45a049;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Notification -->
+    <div id="notification" class="notification"></div>
+
     <!-- Navbar -->
     <header>
-        <div class="container">
-            <div class="logo">
-                <a href="../index.html">
-                <img src="../../assets/logo-navbar.png" alt="Logozinha">
-                </a>
-            </div>
-            <div class="content-nav">
-                <a href="../index.html" class="navlinks">Parceiros</a>
-                <a href="../tela-sobrenos/index.html" class="navlinks">Sobre nós</a>
-                <a href="../tela-formulario/index.html" class="navlinks">Divulgue seu projeto</a>
-            </div>
+      <div class="container">
+        <div class="logo">
+          <a href="../index.html">
+            <img src="../../assets/logo-navbar.png" alt="Logozinha" />
+          </a>
         </div>
+        <div class="content-nav">
+          <a href="../index.html" class="navlinks">Parceiros</a>
+          <a href="../tela-sobrenos/index.html" class="navlinks">Sobre nós</a>
+          <a href="../tela-formulario/index.html" class="navlinks"
+            >Divulgue seu projeto</a
+          >
+        </div>
+      </div>
     </header>
 
     <!-- Seção Formulário -->
     <section class="form-section">
-        <div class="form-left">
-            <h1>Traga sua ONG para a vitrine!</h1>
-            <p>Preencha as informações abaixo para realizar sua inscrição na nossa vitrine de ONGs e ampliar sua visibilidade.</p>
-            <img src="../assets/Frame_1__2_-removebg-preview 3 (2).png" alt="Logo Vitrine de ONGs" class="logo-image">
-        </div>
-        
-        <div class="form-right">
-            <form id="form" class="form-container">
-                <div class="form-group">
-                    <label for="nome">Nome da Instituição</label>
-                    <input type="text" id="nome" name="nome" required>
-                </div>
-                <div class="form-group">
-                    <label for="cnpj">CNPJ</label>
-                    <input type="text" id="cnpj" name="cnpj" required>
-                </div>
-                <div class="form-group">
-                    <label for="contato">Número para contato</label>
-                    <input type="tel" id="contato" name="contato" required>
-                </div>
-                <div class="form-group">
-                    <label for="setor">Setor de atuação</label>
-                    <input type="text" id="setor" name="setor" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Qual o e-mail da organização?</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="cep">CEP</label>
-                    <input type="text" id="cep" name="cep" required>
-                </div>
-                <div class="form-group">
-                    <label for="endereco">Endereço</label>
-                    <input type="text" id="endereco" name="endereco" required>
-                </div>
-                <div class="form-group">
-                    <label for="redes">Redes sociais</label>
-                    <input type="text" id="redes" name="redes">
-                </div>
-                <div class="form-group">
-                    <label for="descricao">Descreva a sua ONG</label>
-                    <textarea id="descricao" name="descricao" required></textarea>
-                </div>
-                <button type="submit" id="submitBtn">Inscreva sua ONG na vitrine!</button>
-            </form>
-        </div>
+      <div class="form-left">
+        <h1>Traga sua ONG para a vitrine!</h1>
+        <p>
+          Preencha as informações abaixo para realizar sua inscrição na nossa
+          vitrine de ONGs e ampliar sua visibilidade.
+        </p>
+        <img
+          src="../assets/Frame_1__2_-removebg-preview 3 (2).png"
+          alt="Logo Vitrine de ONGs"
+          class="logo-image"
+        />
+      </div>
+
+      <div class="form-right">
+        <form id="form" class="form-container">
+          <!-- Informações Básicas -->
+          <div class="form-group">
+            <label for="nome">Nome da Instituição*</label>
+            <input type="text" id="nome" name="nome" required />
+          </div>
+          <div class="form-group">
+            <label for="cnpj">CNPJ*</label>
+            <input
+              type="text"
+              id="cnpj"
+              name="cnpj"
+              pattern="\d{2}\.\d{3}\.\d{3}/\d{4}-\d{2}"
+              title="Digite um CNPJ válido"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="email">E-mail da organização</label>
+            <input type="email" id="email" name="email" />
+          </div>
+          <div class="form-group">
+            <label for="descricao">Descrição da ONG*</label>
+            <textarea id="descricao" name="descricao" required></textarea>
+          </div>
+
+          <!-- Endereço -->
+          <h3>Endereço</h3>
+          <div class="form-group">
+            <label for="logradouro">Logradouro*</label>
+            <input type="text" id="logradouro" name="logradouro" required />
+          </div>
+          <div class="form-group">
+            <label for="numero">Número*</label>
+            <input type="text" id="numero" name="numero" required />
+          </div>
+          <div class="form-group">
+            <label for="complemento">Complemento</label>
+            <input type="text" id="complemento" name="complemento" />
+          </div>
+          <div class="form-group">
+            <label for="bairro">Bairro*</label>
+            <input type="text" id="bairro" name="bairro" required />
+          </div>
+          <div class="form-group">
+            <label for="cidade">Cidade*</label>
+            <input type="text" id="cidade" name="cidade" required />
+          </div>
+          <div class="form-group">
+            <label for="estado">Estado*</label>
+            <input
+              type="text"
+              id="estado"
+              name="estado"
+              maxlength="2"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="cep">CEP*</label>
+            <input
+              type="text"
+              id="cep"
+              name="cep"
+              pattern="\d{5}-\d{3}"
+              title="Digite um CEP válido"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="url">Website da ONG*</label>
+            <input type="url" id="url" name="url" required />
+          </div>
+
+          <!-- Imagens -->
+          <h3>Imagens (mínimo 4)*</h3>
+          <div id="imageUrls" class="image-urls">
+            <div class="image-url-input">
+              <input type="url" class="image-url" required />
+            </div>
+            <div class="image-url-input">
+              <input type="url" class="image-url" required />
+            </div>
+            <div class="image-url-input">
+              <input type="url" class="image-url" required />
+            </div>
+            <div class="image-url-input">
+              <input type="url" class="image-url" required />
+            </div>
+          </div>
+          <button type="button" id="addImageBtn">
+            + Adicionar mais imagens
+          </button>
+
+          <!-- Horário de Funcionamento -->
+          <div class="form-group">
+            <label for="horarioFuncionamento">Horário de Funcionamento*</label>
+            <input
+              type="text"
+              id="horarioFuncionamento"
+              name="horarioFuncionamento"
+              required
+            />
+          </div>
+
+          <button type="submit" id="submitBtn">
+            Inscreva sua ONG na vitrine!
+          </button>
+        </form>
+      </div>
     </section>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
