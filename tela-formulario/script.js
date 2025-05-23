@@ -60,7 +60,7 @@ document.getElementById("form").addEventListener("submit", function (event) {
   document.getElementById("submitBtn").disabled = true;
 
   // Send data to API
-  fetch("http://localhost:3000/ongs?status=ativo", {
+  fetch("http://localhost:3000/ongs", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -69,10 +69,11 @@ document.getElementById("form").addEventListener("submit", function (event) {
     body: JSON.stringify(formData),
   })
     .then((response) => {
+      console.log(response.status);
       if (response.status > 299) {
         throw new Error("Erro na requisição");
       }
-      return response.json();
+      return;
     })
     .then((data) => {
       showNotification(

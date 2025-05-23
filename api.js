@@ -1,6 +1,6 @@
 async function fetchONGs() {
   try {
-    const response = await fetch("http://localhost:3000/ongs");
+    const response = await fetch("http://localhost:3000/ongs?status=ativo");
     const data = await response.json();
     return data;
   } catch (error) {
