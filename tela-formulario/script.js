@@ -60,7 +60,7 @@ document.getElementById("form").addEventListener("submit", function (event) {
   document.getElementById("submitBtn").disabled = true;
 
   // Send data to API
-  fetch("http://localhost:3000/ongs", {
+  fetch("http://localhost:3000/ongs?status=ativo", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
