@@ -39,23 +39,27 @@ function getONGMapIframe(ongName) {
 }
 
 function generateONGDetailHTML(ong) {
-  // Extract ONG folder name for images
-  const ongFolder = getONGImagePath(ong.nome);
-
   return `
     <div class="carousel-info-container">
       <!-- Carrossel -->
       <div class="carousel-container">
-       <div class="carousel-main">
-          <img id="mainImage" src="../assets/${ongFolder}/carousel-main.jpg" alt="Imagem principal do carrossel">
+        <div class="carousel-main">
+          <img id="mainImage" src="${
+            ong.imagens[0]
+          }" alt="Imagem principal do carrossel">
         </div>
         <div class="carousel-thumbnails">
           <button class="prev" onclick="window.moveSlide(-1)">&#10094;</button>
           <div class="thumbnails">
-            <img class="thumbnail" src="../assets/${ongFolder}/carousel1.jpg" alt="Imagem 1" onclick="window.selectImage(0)">
-            <img class="thumbnail" src="../assets/${ongFolder}/carousel2.jpg" alt="Imagem 2" onclick="window.selectImage(1)">
-            <img class="thumbnail" src="../assets/${ongFolder}/carousel3.jpg" alt="Imagem 3" onclick="window.selectImage(2)">
-            <img class="thumbnail" src="../assets/${ongFolder}/carousel4.jpg" alt="Imagem 4" onclick="window.selectImage(3)">
+            ${ong.imagens
+              .map(
+                (imagem, index) => `
+              <img class="thumbnail" src="${imagem}" alt="Imagem ${
+                  index + 1
+                }" onclick="window.selectImage(${index})">
+            `
+              )
+              .join("")}
           </div>
           <button class="next" onclick="window.moveSlide(1)">&#10095;</button>
         </div>
@@ -85,36 +89,7 @@ function generateONGDetailHTML(ong) {
     </div>
 
     <section class="content">
-      ${
-        ong.conteudoDetalhes ||
-        `
-        <h2>Sobre a ${ong.nome}</h2>
-        <p>${ong.descricao}</p>
-        ${
-          ong.sejaVoluntario
-            ? `
-            <h2>Seja Voluntário</h2>
-            <p>Email para contato: ${ong.sejaVoluntario.email}</p>
-            ${
-              ong.sejaVoluntario.formulario
-                ? `<p><a href="${ong.sejaVoluntario.formulario}" target="_blank" class="button">Formulário de Voluntariado</a></p>`
-                : ""
-            }
-            `
-            : ""
-        }
-        ${
-          ong.formasDeDoacão && ong.formasDeDoacão.length > 0
-            ? `
-            <h2>Formas de Doação</h2>
-            <ul>
-              ${ong.formasDeDoacão.map((forma) => `<li>${forma}</li>`).join("")}
-            </ul>
-            `
-            : ""
-        }
-        `
-      }
+      ${ong.conteudoDetalhes}
     </section>
   `;
 }
@@ -127,16 +102,4 @@ function showError(message) {
       <a href="../index.html">Voltar para a página inicial</a>
     </div>
   `;
-}
-
-// Helper function to map ONG names to image paths
-function getONGImagePath(name) {
-  const nameMap = {
-    "Instituto Ser+": "institutosermais",
-    "Hamburgada do Bem": "hamburgada do bem",
-    "Instituto Empreeduca": "empreeduca",
-    "Cidadão Pró-Mundo": "cidadaopromundo",
-  };
-
-  return nameMap[name] || name.toLowerCase().replace(/\s+/g, "");
 }

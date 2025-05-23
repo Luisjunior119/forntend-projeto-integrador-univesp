@@ -23,7 +23,7 @@ function createONGCard(ong) {
   const city = ong.endereco.cidade || "";
 
   card.innerHTML = `
-    <img src="/assets/${getONGImagePath(ong.nome)}/main.jpg" alt="${
+    <img src="${ong.imagens.filter((img) => img.includes("main"))[0]}" alt="${
     ong.nome
   }" class="card-img" />
     <div class="card-content">
@@ -36,18 +36,6 @@ function createONGCard(ong) {
   `;
 
   return card;
-}
-
-// Helper function to map ONG names to image paths
-function getONGImagePath(name) {
-  const nameMap = {
-    "Instituto Ser+": "institutosermais",
-    "Hamburgada do Bem": "hamburgada do bem",
-    "Instituto Empreeduca": "empreeduca",
-    "Cidadão Pró-Mundo": "cidadaopromundo",
-  };
-
-  return nameMap[name] || name.toLowerCase().replace(/\s+/g, "");
 }
 
 // Search functionality
